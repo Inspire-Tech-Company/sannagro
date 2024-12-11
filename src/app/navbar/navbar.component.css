@@ -1,0 +1,148 @@
+
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navbar-logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-logo span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar-logo p {
+  font-size: 12px;
+  margin: 0;
+  color: #666;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #009640;
+  font-weight: 500;
+  font-size: 16px; 
+  white-space: nowrap; 
+}
+
+.navbar-links a:hover {
+  color: #01672d;
+}
+
+.dropdown:hover > .dropdown-toggle {
+  color: #009640;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  background-color: #009640; 
+}
+
+.dropdown-menu li a {
+  color: white; 
+}
+
+.dropdown-menu li a:hover {
+  color: #EBFFF3; 
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 180px; 
+  z-index: 1100;
+}
+
+.dropdown-menu li {
+  padding: 5px 10px;
+}
+
+.dropdown-menu a {
+  color: #01672d;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  color: #01672d;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-toggle .arrow {
+  font-size: 14px;
+  margin-top: 2px;
+}
+
+.navbar-button button {
+  background-color: #009640;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-button button:hover {
+  background-color: #02692f;
+}
+
+.dropdown-menu li:hover {
+  background-color: rgba(1, 103, 45, 0.1);
+}

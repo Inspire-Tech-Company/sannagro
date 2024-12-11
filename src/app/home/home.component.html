@@ -1,0 +1,143 @@
+<div class="carousel-container">
+    <!-- Carrossel -->
+    <div class="carousel">
+      <div
+        class="carousel-item"
+        *ngFor="let item of carouselItems; let i = index"
+        [class.active]="i === activeIndex"
+      >
+        <div
+          class="carousel-bg"
+          [style.backgroundImage]="'url(' + item.image + ')'"
+        ></div>
+        <div class="carousel-content">
+            <p class="subtitle" [innerHTML]="item.subtitle"></p>
+          <h1>{{ item.title }}</h1>
+          <p class="description">{{ item.description }}</p>
+          <button class="cta-button">{{ item.buttonText }}</button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Controles -->
+    <div class="carousel-controls">
+      <button (click)="prevSlide()">&#10094;</button>
+      <button (click)="nextSlide()">&#10095;</button>
+    </div>
+  
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+      <div
+        *ngFor="let item of carouselItems; let i = index"
+        [class.active]="i === activeIndex"
+        (click)="goToSlide(i)"
+      ></div>
+    </div>
+  </div>
+  
+  <section class="sobre-missao-container">
+    <div class="sobre-missao-content">
+        <div class="sobre-missao-cards">
+            <div class="card-sobre">
+                <h3>Quem Somos?</h3>
+                <h2>Nós somos solução em pesagem!</h2>
+                <p>Através de agilidade e inovação tecnológica, a SannAgro atua no desenvolvimento, fabricação e comercialização de balanças, rodoviárias para todo o Brasil. Nosso objetivo é mudar o mercado de balanças para o melhor, e entregar aos nossos clientes a segurança e produtividade que eles merecem!</p>
+                <a href="/sobre">Saiba Mais ></a>
+            </div>
+            <div class="card-sobre">
+                <h3>Nossa Missão!</h3>
+                <h2>Soluções que Geram Valor</h2>
+                <p>A nossa missão é fornecer soluções de pesagem com confiança, prontidão e bom atendimento, atendendo às necessidades específicas de cada cliente. Com mais de 40 anos de experiência, a empresa se destaca pela qualidade e eficiência na comercialização, venda, manutenção, instalação e calibração de balanças e sistemas de pesagem.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="diferenciais-container">
+  <h2>Diferenciais</h2>
+  <div class="diferenciais-cards">
+    <div class="card">
+      <div class="icon">
+        <img src="assets/icons/agilidade.png" alt="Ícone Agilidade" />
+      </div>
+      <h3>Agilidade</h3>
+      <p>
+        Entendemos a importância de rapidez no seu negócio e garantimos operações sem interrupções com soluções ágeis e confiáveis.
+      </p>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <img src="assets/icons/confianca.png" alt="Ícone Confiança" />
+      </div>
+      <h3>Confiança</h3>
+      <p>
+        Com experiência desde 1988, desenvolvemos equipamentos robustos e de alta qualidade, transmitindo segurança em cada pesagem.
+      </p>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <img src="assets/icons/produtividade.png" alt="Ícone Produtividade" />
+      </div>
+      <h3>Produtividade</h3>
+      <p>
+        Aumente a eficiência da sua equipe com nossa tecnologia de pesagem, para operações mais produtivas no dia a dia.
+      </p>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <img src="assets/icons/pesagem.png" alt="Ícone Pesagem" />
+      </div>
+      <h3>Pesagem</h3>
+      <p>
+        Fabricamos, instalamos e calibramos balanças, garantindo precisão em todo o processo de pesagem.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="balancas-container">
+  <h2>Balanças</h2>
+  <div class="balancas-content">
+    <div class="balanca-card">
+      <div class="balanca-image" style="background-image: url('assets/concreto.jpg');">
+        <span>Concreto</span>
+      </div>
+    </div>
+    <div class="balanca-card">
+      <div class="balanca-image" style="background-image: url('assets/movel.jpg');">
+        <span>Móvel</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="servicos-container">
+  <div class="servicos-menu">
+    <div
+      *ngFor="let item of servicos; let i = index"
+      class="servico-item"
+      [class.active]="i === activeIndex2"
+      (click)="changeImage(i)"
+    >
+      <img [src]="item.icon" [alt]="item.title">
+      <p>{{ item.title }}</p>
+    </div>
+  </div>
+  <div class="servicos-content">
+    <div class="servicos-title">
+      <h2>{{ servicos[activeIndex2].title }}</h2>
+    </div>
+    <div class="servicos-images">
+      <img 
+        *ngFor="let image of servicos[activeIndex2].images" 
+        [src]="image" 
+        alt="Imagem do Serviço"
+      >
+    </div>
+    <button class="agende-button">Agende um Horário</button>
+  </div>
+</section>
+
+
+
+

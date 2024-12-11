@@ -1,0 +1,95 @@
+<div class="carousel-container">
+  <!-- Carrossel -->
+  <div class="carousel">
+      <div
+          class="carousel-item"
+          *ngFor="let item of carouselItems; let i = index"
+          [class.active]="i === activeIndex"
+      >
+          <div
+              class="carousel-bg"
+              [style.backgroundImage]="'url(' + item.image + ')'"
+          ></div>
+          <div class="carousel-content">
+              <p class="subtitle" [innerHTML]="item.subtitle"></p>
+              <h1>{{ item.title }}</h1>
+              <p class="description">{{ item.description }}</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<section class="sobre-container">
+  <div class="sobre-content">
+      <div class="sobre-text">
+          <h2>Sobre a SannAgro</h2>
+          <p>
+            SannAgro, com mais de 40 anos de experiência no mercado, emerge da união da Sannar Balanças com a SannAgro original, fortalecendo sua posição como líder no fornecimento de soluções de pesagem. Especializada na venda, manutenção, instalação e calibração de balanças e sistemas de pesagem, a empresa oferece produtos e serviços que combinam tradição, qualidade e inovação tecnológica. Atendendo a uma vasta gama de indústrias, incluindo agronegócio, setores industriais e transporte rodoviário, a SannAgro se destaca pelo seu compromisso com a excelência e por fornecer equipamentos que garantem a máxima eficiência e confiabilidade.
+          </p>
+          
+      </div>
+      <div class="sobre-image">
+          <div class="triangle">
+              <img src="assets/logo_sobre.png" alt="Sobre SannAgro" />
+          </div>
+      </div>
+  </div>
+</section>
+
+<section class="diferenciais-container">
+  <h2>Diferenciais</h2>
+  <div class="diferenciais-cards">
+    <div class="card">
+      <div class="icon">
+        <img src="assets/icons/missao.png" alt="Ícone Missão" />
+      </div>
+      <h3>Missão</h3>
+      <p>
+        A missão da SannAgro é fornecer soluções de pesagem inovadoras e de alta qualidade, superando as expectativas dos clientes em termos de precisão e confiabilidade. A empresa está comprometida com a excelência operacional e o atendimento ao cliente, visando contribuir significativamente para o sucesso e crescimento dos setores que atende, adaptando-se às suas necessidades em evolução.
+      </p>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <img src="assets/icons/visao.png" alt="Ícone Visão" />
+      </div>
+      <h3>Visão</h3>
+      <p>
+        A SannAgro almeja reforçar seu posicionamento no mercado brasileiro de soluções de pesagem e expandir globalmente, buscando ser reconhecida por sua qualidade, inovação e confiabilidade. A empresa visualiza um futuro onde suas soluções promovam eficiência operacional excepcional para seus clientes em todo o mundo.
+      </p>
+    </div>
+    <div class="card">
+      <div class="icon">
+        <img src="assets/icons/valor.png" alt="Ícone Valores" />
+      </div>
+      <h3>Valores</h3>
+      <p>
+        A SannAgro valoriza a combinação de qualidade com tradição, inovação tecnológica, e a construção de relações confiáveis e duradouras com todas as partes interessadas. A empresa se compromete com práticas sustentáveis e éticas, enfatizando sua responsabilidade social e ambiental para com a comunidade e o meio ambiente, visando um impacto positivo e duradouro.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="regulamentacao-container">
+  <div class="regulamentacao-content">
+    <!-- Texto da Regulamentação -->
+    <div class="regulamentacao-text">
+      <h2>Regulamentação</h2>
+      <p>
+        A regulamentação destacada demonstra o comprometimento da SannAgro com a qualidade e confiabilidade dos serviços prestados. A empresa possui acreditação pela Rede Brasileira de Calibração (RBC), um reconhecimento concedido pelo Inmetro através da Coordenação Geral de Acreditação (CGCRE), que garante que seus processos de calibração seguem rigorosos padrões técnicos e de gestão. Essa acreditação está em conformidade com a norma internacional ABNT NBR ISO/IEC 17025, que especifica os requisitos gerais para a competência de laboratórios de ensaio e calibração.
+      </p>
+      <p>
+        Ao operar dentro dos critérios estabelecidos pela ISO/IEC 17025, a SannAgro assegura que as medições realizadas são exatas, confiáveis e rastreáveis, reforçando sua integridade e compromisso com a excelência. A norma é amplamente reconhecida em diversos países, promovendo não apenas confiança no mercado interno, mas também credibilidade no cenário internacional. Com o número de acreditação CAL 0767, a SannAgro demonstra sua competência técnica e sua adesão a práticas que visam a melhoria contínua e a confiabilidade nos resultados.
+      </p>
+      <p>
+        A participação na Rede Brasileira de Calibração significa que o laboratório está apto a realizar calibrações em instrumentos de medição com elevado rigor técnico, assegurando que os procedimentos atendem aos requisitos normativos nacionais e internacionais. Essa acreditação reforça a missão da SannAgro de oferecer serviços com qualidade e confiabilidade superiores, atendendo às expectativas de seus clientes e contribuindo para o avanço das práticas metrológicas no Brasil.
+      </p>
+    </div>
+
+    <div class="regulamentacao-image">
+      <img src="assets/selo_rbc.png" alt="Selo RBC">
+      <p class="selo-description">
+        Laboratório de calibração acreditado pela CGCRE de acordo com a ABNT NBR ISO/IEC 17025, sob número CAL 0767.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<div class="carousel-container">
+    <!-- Carrossel -->
+    <div class="carousel">
+        <div
+            class="carousel-item"
+            *ngFor="let item of carouselItems; let i = index"
+            [class.active]="i === activeIndex"
+        >
+            <div
+                class="carousel-bg"
+                [style.backgroundImage]="'url(' + item.image + ')'"
+            ></div>
+            <div class="carousel-content">
+                <p class="subtitle" [innerHTML]="item.subtitle"></p>
+                <h1>{{ item.title }}</h1>
+                <p class="description">{{ item.description }}</p>
+            </div>
+        </div>
+    </div>
+  </div>

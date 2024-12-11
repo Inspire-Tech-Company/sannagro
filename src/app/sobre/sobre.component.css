@@ -1,0 +1,329 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    overflow: hidden; 
+    margin-top: -20px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-content {
+    max-width: 720px;
+    margin-left: 100px; 
+    text-align: left; 
+    padding: 20px 50px; 
+    position: relative; 
+    left: 0;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center; 
+    flex-direction: column;
+    text-align: left;
+    color: white;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    z-index: 1;
+}
+  
+.carousel-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-size: contain; 
+    background-position: center center; 
+    background-repeat: no-repeat;
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+.carousel-content .subtitle {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.bold {
+    font-weight: bold !important;;
+}
+  
+.carousel-content h1 {
+    font-size: 3.5rem; 
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+  
+.carousel-content .description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5; 
+}
+
+.carousel-content .cta-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carousel-content .cta-button:hover {
+    background-color: #c0edd2;
+}
+  
+/* Controles do carrossel */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+  
+.carousel-controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 20px;
+}
+  
+.carousel-controls button:hover {
+    color: #EBFFF3;
+}
+
+/* Indicadores do carrossel */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicators div {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicators div.active {
+    background-color: #009640;
+}
+
+/* Container Principal */
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin-top: -50px;
+}
+
+/* Estilização do Conteúdo */
+.sobre-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+}
+
+.sobre-text {
+    flex: 1;
+}
+
+.sobre-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.sobre-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Estilização da Imagem */
+.sobre-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-image .triangle {
+    position: relative;
+    width: 420px; 
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    overflow: hidden;
+    margin: 0; 
+}
+
+.sobre-image .triangle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.diferenciais-container {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.diferenciais-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.diferenciais-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.card .icon {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px; 
+    border-radius: 50%;
+    background-color: #e8f5e9;
+    padding: 10px; 
+}
+
+.card .icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: left; 
+}
+
+.regulamentacao-container {
+    padding: 50px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+}
+  
+.regulamentacao-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.regulamentacao-text {
+    flex: 2; 
+}
+
+.regulamentacao-text h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.regulamentacao-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.regulamentacao-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.regulamentacao-image img {
+    max-width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selo-description {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: #555;
+    text-align: center;
+    max-width: 80%;
+}

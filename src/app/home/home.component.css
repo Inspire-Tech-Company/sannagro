@@ -1,0 +1,423 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-content {
+    max-width: 720px;
+    margin-left: 100px; 
+    text-align: left; 
+    padding: 20px 50px; 
+    position: relative; 
+    left: 0;
+}
+
+.carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center; 
+    flex-direction: column;
+    text-align: left;
+    color: white;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    z-index: 1;
+}
+  
+.carousel-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.carousel-content .subtitle {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.bold {
+    font-weight: bold !important;;
+}
+  
+.carousel-content h1 {
+    font-size: 3.5rem; 
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+  
+.carousel-content .description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.5; 
+}
+
+.carousel-content .cta-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carousel-content .cta-button:hover {
+    background-color: #c0edd2;
+}
+  
+/* Controles do carrossel */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+  
+.carousel-controls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0 20px;
+}
+  
+.carousel-controls button:hover {
+    color: #EBFFF3;
+}
+
+/* Indicadores do carrossel */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicators div {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicators div.active {
+    background-color: #009640;
+}
+  
+/* Quem Somos Section */
+.sobre-missao-container {
+    padding: 50px 20px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff; 
+}
+
+.sobre-missao-content {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f7f7f7; 
+    padding: 50px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.sobre-missao-content::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    right: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to left , #009640, #3BAA35, #77B72A); 
+    z-index: 1;
+}
+
+.card-sobre {
+    padding: 30px;
+    flex: 1;
+    text-align: left;
+}
+
+.card-sobre h3 {
+    font-size: 1rem;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-sobre h2 {
+    font-size: 1.8rem;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-sobre p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.card-sobre a {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #009640;
+    text-decoration: none;
+}
+
+.card-sobre a:hover {
+    text-decoration: underline;
+}
+
+.sobre-missao-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+    z-index: 2; 
+}
+
+/* DIFERENCIAIS */
+.diferenciais-container {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.diferenciais-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.diferenciais-cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.card .icon {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px; 
+    border-radius: 50%;
+    background-color: #e8f5e9;
+    padding: 10px; 
+}
+
+.card .icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: left; 
+}
+
+/* Container Principal */
+.balancas-container {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Fundo claro */
+  }
+  
+  .balancas-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 40px;
+  }
+  
+  /* Conteúdo das Balanças */
+  .balancas-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite que os cards quebrem linha em telas menores */
+  }
+  
+  /* Card de cada balança */
+  .balanca-card {
+    flex: 1;
+    max-width: 600px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Imagem de Fundo */
+  .balanca-image {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  /* Texto Sobreposto */
+  .balanca-image span {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+/* SERVIÇOS */ 
+.servicos-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 50px 20px;
+    color: #009640;
+    align-items: center; 
+}
+
+.servicos-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center; 
+}
+
+.servico-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #009640;
+    transition: transform 0.3s, background-color 0.3s;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.servicos-images {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.servico-item p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.servico-item:hover {
+    transform: scale(1.1);
+    background-color: #EBFFF3;
+}
+
+.servico-item.active {
+    color: #009640;
+}
+
+.servicos-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.servicos-images img {
+    width: 330px; 
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.servicos-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.agende-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #009640;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.agende-button:hover {
+    background-color: #006c30;
+}
+
+.servicos-title h2 {
+    font-size: 1.5rem;
+    color: #009640;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+  
